@@ -51,7 +51,7 @@ char pop(Pilha *p){
 		
 }
 
-void destroi(Pilha** p){
+void destroi(Pilha *p){
 	free((*p)->item);
 	free(*p);
 	*p=NULL;

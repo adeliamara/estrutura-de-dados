@@ -1,4 +1,4 @@
-typedef char ItemPilha;
+ypedef char ItemPilha;
 
 typedef struct pilha {
     int max;  // Capacidade da pilha

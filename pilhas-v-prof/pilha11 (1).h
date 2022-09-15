@@ -27,6 +27,8 @@ int pilhaCheia(Pilha *p){
 
 
 int pilhaVazia(Pilha *p){
+	if (p==NULL)
+	    return 1;
     if (p->topo==-1) 
 	       return 1;
 	return 0;
