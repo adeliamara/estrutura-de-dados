@@ -15,13 +15,11 @@ int ordernar_sequencia(Pilha pilhaA, Pilha pilhaB){
 		anterior = (i==0) ? item : pilhaA->item[pilhaA->topo];
 		
 		
-		while(item<anterior){
+		while(item>anterior){
 			push(pop(pilhaA), pilhaB);
 			anterior = pilhaA->item[pilhaA->topo];
 		}
-        if(item>=anterior){
 			push(item, pilhaA);
-		}
 		while(!vaziap(pilhaB)){
 			item = pop(pilhaB);
 			push(item, pilhaA);
