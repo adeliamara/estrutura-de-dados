@@ -67,12 +67,13 @@ public:
 		return 0;
 	}
 
-	void destroi(){
-		while(!isEmpty()){
+	void destroi()
+	{
+		while (!isEmpty())
+		{
 			pop();
 		}
 	}
-
 };
 
 int main()
@@ -83,15 +84,17 @@ int main()
 	pilha_teste->push('b');
 	pilha_teste->push('c');
 
-	if(pilha_teste != NULL){
-		cout<<"CRIOU"<<endl;
+	if (pilha_teste != NULL)
+	{
+		cout << "CRIOU" << endl;
 	}
 
 	cout << pilha_teste->pop() << endl;
 
 	pilha_teste->destroi();
-	
-	if(pilha_teste->isEmpty()){
-		cout<<"FUNCIONOU"<<endl;
+
+	if (pilha_teste->isEmpty())
+	{
+		cout << "FUNCIONOU" << endl;
 	}
 }

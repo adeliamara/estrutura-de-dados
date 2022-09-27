@@ -44,7 +44,7 @@ public:
 			fim->prox = novo;
 		}
 		fim = novo;
-		//fim->prox = NULL;
+		// fim->prox = NULL;
 	}
 
 	Itemp pop()
@@ -55,7 +55,8 @@ public:
 		{
 			elemento_retornado = inicio->nome;
 			No *aux = inicio;
-			if(inicio == fim){
+			if (inicio == fim)
+			{
 				fim = NULL;
 				free(fim);
 			}
@@ -74,8 +75,10 @@ public:
 		return 0;
 	}
 
-	void destroi(){
-		while(!isEmpty()){
+	void destroi()
+	{
+		while (!isEmpty())
+		{
 			pop();
 		}
 	}
@@ -92,17 +95,17 @@ int main()
 	fila_teste->push('l');
 	fila_teste->push('a');
 
-	while (!(fila_teste->isEmpty())){
-		cout<<fila_teste->pop()<<endl;
-		cout<<"inicio: "<< fila_teste->inicio<<endl;
-		cout<<"final->prox: "<< fila_teste->fim<<endl;
+	while (!(fila_teste->isEmpty()))
+	{
+		cout << fila_teste->pop() << endl;
+		cout << "inicio: " << fila_teste->inicio << endl;
+		cout << "final->prox: " << fila_teste->fim << endl;
 	}
 
-	if(fila_teste->isEmpty()) cout << "limpou"<<endl;
+	if (fila_teste->isEmpty())
+		cout << "limpou" << endl;
 
-
-
-	//AGORA COM DESTROI
+	// AGORA COM DESTROI
 	Fila *fila_teste1 = new Fila();
 
 	fila_teste1->push('a');
@@ -111,8 +114,9 @@ int main()
 	fila_teste1->push('l');
 	fila_teste1->push('a');
 
-    fila_teste1->destroi();
+	fila_teste1->destroi();
 
-	if(fila_teste->isEmpty()) cout << "limpou com destroi";
+	if (fila_teste->isEmpty())
+		cout << "limpou com destroi";
 	return 0;
 }
