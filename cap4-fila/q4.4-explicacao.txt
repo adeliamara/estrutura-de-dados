@@ -1,0 +1,27 @@
+Pelo algortimo apresentado, a execução é encerrada sempre que o tempo t é menor ou igual a tres.
+Observamos que t é o resto da divisao de tempo/10. 
+
+Nesse caso,
+17 precisará ser processado tres vezes.
+17%10 - 3 = 4 => 4 + 10
+14%10 - 3 = 1 => 1 + 10
+proxima execucao t = 1 -> fim da execucao
+
+
+25 precisará ser processado uma vez.
+25%10 - 3 = 2 => 2 + 20
+proxima execucao t = 2 -> fim da execucao
+
+
+39 precisará ser processado tres vezes
+39%10 - 3 = 6 =>30 + 6
+36%10 - 3 = 3 =>30 + 3
+proxima execucao t = 3 -> fim da execucao
+
+46 precisará ser processado uma vez
+46%10 - 3 = 3 => 40 + 3
+proxima execucao t = 3 -> fim da execucao
+
+
+Como estão em fila, o primeiroa ser finalizado é o processo 25. Em seguida, o processo 46. 
+Depois o processo 17 e por ultimo o processo 36.
