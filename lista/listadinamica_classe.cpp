@@ -127,10 +127,12 @@ public:
 		{
 			if (no_atual->matricula == mat)
 			{
-				return no_atual;
+				cout << "--- elemento buscado: " << endl;
+				cout << "Matricula: " << no_atual->matricula
+					 << "\nNome: " << no_atual->nome << endl;
+				break;
 			}
-			cout << "\tMatricula: " << no_atual->matricula << " e "
-				 << "nome" << no_atual->nome << endl;
+
 			no_atual = no_atual->prox;
 		}
 		free(no_atual);
@@ -215,6 +217,9 @@ main()
 	lista_inversa->mostra();
 
 	cout << "\nteste adicionado: removendo elemento de matricula 1" << endl;
-	lista->remove(1);
+	cout << "sucesso em remover: "<< lista->remove(1)<<endl;
 	lista->mostra();
+
+	cout << "\nteste adicionado: busca matricula 2" << endl;
+	lista->busca(2);
 }
