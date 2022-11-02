@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void insereCrescente(Item x, Lista *L){
+void insere(Item x, Lista *L){
     while(*L != NULL && (*L)->item < x) {
         L = &(*L)->prox;
     }
@@ -11,13 +11,6 @@ void insereCrescente(Item x, Lista *L){
 
 }
 
-void insereDescrescente(Item x, Lista *L){
-    while(*L != NULL && (*L)->item > x) {
-        L = &(*L)->prox;
-    }
-    *L = no(x, *L); //Valor atribuido ao ponteiro apontado por L
-
-}
 
 void remove(Item x, Lista *L){
     while(*L != NULL && (*L)->item < x) {
@@ -30,12 +23,12 @@ void remove(Item x, Lista *L){
 
 int main(){
     Lista lista = NULL;
-    insereDescrescente(3, &lista);
-    insereDescrescente(1, &lista);
-    insereDescrescente(10, &lista);
-    insereDescrescente(7, &lista);
-    insereDescrescente(12, &lista);
+    insere(3, &lista);
+    insere(1, &lista);
+    insere(10, &lista);
+    insere(7, &lista);
+    insere(12, &lista);
 
-    exibe(lista);
+    exibe_inv(lista);
     return 0;
 }
