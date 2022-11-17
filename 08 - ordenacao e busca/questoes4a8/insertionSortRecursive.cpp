@@ -1,3 +1,5 @@
+/* solucao dupla : Adelia Mara e Vitor Araujo*/
+
 #include <iostream>
 using namespace std;
 
