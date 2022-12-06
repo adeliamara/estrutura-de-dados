@@ -1,0 +1,3 @@
+O melhor caso do Quicksort ocorre quando as partições são balanceadas, isto é, cada partição com n/2 elementos. Já o pior caso do Quicksort ocorre quando as chamadas recursivas produzem partições com 0 e n-1 elementos. A partição de tamanho zero fica à direita ou à esquerda do pivô (depende do vetor)
+
+O pior caso acontece quando vetor está ordenado inverso ao que desejamos. Por exemplo, se quisermos ordenar em ordem crescente, o pior caso seria o vetor em ordem decrescente. A complexidade nesse caso é O(n^2)
